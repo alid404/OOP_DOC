@@ -35,6 +35,46 @@ $newUser->update(
     ]
 );
 
+$players = $newUser->read(
+    "players", 
+    [
+        "rating" => 50,   
+        "pacing" => 50    
+    ]
+);
+
+foreach ($players as $player) {
+    echo "Player Name: " . $player['name'] . "<br>";
+    echo "Physical: " . $player['Physical'] . "<br>";
+    echo "Rating: " . $player['rating'] . "<br>";
+    echo "Pacing: " . $player['pacing'] . "<br>";
+    echo "Dribbling: " . $player['dribbling'] . "<br>";
+    echo "<hr>";
+}
+
+
+################# different TESTS for READ ###############"// Get all players
+$allPlayers = $newUser->read("players");
+print_r($allPlayers);
+
+// Get any player based on their ID
+$player = $newUser->read(
+    "players", 
+    [
+        "id" => 1 
+    ]
+);
+print_r($player);
+
+// Get the players with a specific rating
+$highRatedPlayers = $newUser->read(
+    "players", 
+    [
+        "rating" => 99 
+    ]
+);
+print_r($highRatedPlayers);
+
 ?>
 </body>
 </html>
