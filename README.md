@@ -9,9 +9,8 @@
 - [Magic Methods](#magic-methods)
 - [Namespaces & Autoloading](#namespaces--autoloading)
 - [Design Patterns](#design-patterns)
+- [Method Overriding and Overloading](#Method-Overloading-in-PHP)
 - [Best Practices](#best-practices)
-- [SOLID Principles](#solid-Principles)
-- [Method Overloading in PHP](#Method-Overloading-in-PHP)
     
 
 ## Core Concepts
